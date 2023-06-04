@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
+body {
+    height: 100vh;
+    background-color:rgb(227, 205, 176);
+}
+img {
+    max-width: 100%;
+    background-size: cover;
+    margin: 0 auto;
+    height: 320px;
+    width: 310px;
+}
+.purple-color {
+    color: rgb(131, 123, 246);
+}
+.blue-color {
+    color:aquamarine;
+}
+.pink-color {
+    color: rgb(235, 6, 6);
+}
+.green-color {
+    color: rgb(93, 238, 93);
+}
+.coral-color {
+    color: rgb(16, 157, 250);
+}
+.animate-charcter
+{   
+    text-align: center;
+    float: inline-end;
+    margin: 15px;
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #830505 29%,
+    #880d79 67%,
+    #0d6fd6 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  
+  color: #fff;
+  background-clip: text;
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 50px;
+}
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+.col-md-3 {
+    display: inline-block;
+    margin-right: 20px;
+    object-fit: cover;
+}
+.album_container {
+    position: relative;
+    margin: 10px auto;
+    width: 250px;
+    height:250px;
+    perspective: 1000px;
+}
+.picture {
+    width: 100%;
+    height: 100%;
+    box-shadow: -5px 5px 5px #aaa;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    color:white;
+    text-align: center;
+    background-color: #e4b3b3;
+    transform: rotateY(180deg);
+}
+
+.row .album_container:hover .picture {
+    transform: rotateY(180deg);
+}
+
+
+.row {
+    margin-bottom: 50px;
+}
